@@ -1,0 +1,152 @@
+/* Hide feed elements - these selectors target LinkedIn's feed container */
+.feed-blocker-active .feed-container,
+.feed-blocker-active .core-rail,
+.feed-blocker-active div[data-test-id="feed-container"],
+.feed-blocker-active .scaffold-finite-scroll,
+.feed-blocker-active .scaffold-finite-scroll__content,
+.feed-blocker-active div[role="main"] div[data-test-id="main-feed"] {
+  display: none !important;
+}
+
+/* Hide additional feed-related elements */
+.feed-blocker-active .feed-follows-module,
+.feed-blocker-active .feed-shared-update-v2,
+.feed-blocker-active .feed-shared-update-v2__description-wrapper,
+.feed-blocker-active .update-components-actor,
+.feed-blocker-active .feed-identity-module {
+  display: none !important;
+}
+
+/* Replace the feed with a motivational message when blocking is active */
+.feed-blocker-active div[role="main"] div[data-test-id="main-feed"]::before {
+  content: "Feed blocked by LinkedFocus. Stay productive!";
+  display: block !important;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a66c2;
+  background-color: #f3f6f8;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the replacement content */
+.feed-replacement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f6f8;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feed-replacement h2 {
+  color: #0a66c2;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.feed-replacement p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.feed-replacement .quote {
+  font-style: italic;
+  color: #0a66c2;
+  margin: 20px 0;
+  padding: 0 20px;
+  font-size: 18px;
+  position: relative;
+}
+
+.feed-replacement .quote::before,
+.feed-replacement .quote::after {
+  content: '"';
+  font-size: 24px;
+  position: absolute;
+}
+
+.feed-replacement .quote::before {
+  left: 0;
+  top: 0;
+}
+
+.feed-replacement .quote::after {
+  right: 0;
+  bottom: 0;
+}
+
+/* When blocking is disabled */
+.feed-blocker-disabled .feed-container,
+.feed-blocker-disabled .core-rail,
+.feed-blocker-disabled div[data-test-id="feed-container"],
+.feed-blocker-disabled .scaffold-finite-scroll,
+.feed-blocker-disabled .scaffold-finite-scroll__content,
+.feed-blocker-disabled div[role="main"] div[data-test-id="main-feed"] {
+  display: block !important;
+}
+
+/* 
+News blocker styles - Commented out for future update
+
+.news-blocker-active .news-module,
+.news-blocker-active div[data-test-id="news-module"],
+.news-blocker-active div[aria-label="LinkedIn News"],
+.news-blocker-active aside section:has(span:contains("LinkedIn News")),
+.news-blocker-active aside div:has(h2:contains("LinkedIn News")),
+.news-blocker-active aside .aside-module-aside:has(div:contains("LinkedIn News")),
+.news-blocker-active .aside-content-module > div > div > div > h2:contains("LinkedIn News"),
+.news-blocker-active .scaffold-layout__aside section[aria-label="LinkedIn News"] {
+  display: none !important;
+}
+
+.news-blocker-active aside .news-recirc-module, 
+.news-blocker-active aside section[data-test-id="today-news-module"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+[data-hidden-by-news-blocker="true"] {
+  display: none !important;
+}
+
+.news-blocker-active .authentication-outlet,
+.news-blocker-active .application-outlet,
+.news-blocker-active .global-wrapper,
+.news-blocker-active .scaffold-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.news-blocker-active header,
+.news-blocker-active nav,
+.news-blocker-active .global-nav,
+.news-blocker-active .global-nav__content,
+.news-blocker-active .global-nav__primary-items,
+.news-blocker-active .global-nav__secondary-items {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.news-blocker-active .msg-overlay-container,
+.news-blocker-active .msg-overlay-list-bubble,
+.news-blocker-active .messaging-overlay {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+*/

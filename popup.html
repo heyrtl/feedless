@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>feedless</title>
+  <style>
+    body {
+      width: 250px;
+      padding: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f6f8;
+      margin: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h1 {
+      font-size: 18px;
+      color: #0a66c2;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .toggle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .toggle-label {
+      font-size: 14px;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #0a66c2;
+    }
+    
+    input:focus + .slider {
+      box-shadow: 0 0 1px #0a66c2;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    .status {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 5px;
+      text-align: center;
+    }
+    
+    .enabled {
+      color: #0a66c2;
+    }
+    
+    .disabled {
+      color: #666;
+    }
+    
+    .footer {
+      font-size: 11px;
+      color: #999;
+      margin-top: 15px;
+      text-align: center;
+    }
+    
+    .copyright {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #777;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LinkedFocus</h1>
+    
+    <p>Block the LinkedIn feed to stay productive and avoid endless scrolling.</p>
+    
+    <div class="toggle-container">
+      <span class="toggle-label">Block Feed</span>
+      <label class="switch">
+        <input type="checkbox" id="feed-blocker-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="status" id="status-text">Checking status...</div>
+    
+    <!-- News blocker toggle (commented out for future update)
+    <div class="toggle-container" style="margin-top: 10px;">
+      <span class="toggle-label">Block News</span>
+      <label class="switch">
+        <input type="checkbox" id="news-blocker-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="status" id="news-status-text">Checking news status...</div>
+    -->
+    
+    <div class="footer">
+      Refresh LinkedIn page after toggling for best results.
+      <p class="copyright">&copy; 2025, Created by Ratul Rahman</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
