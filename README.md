@@ -48,4 +48,4 @@ A Chrome extension that blocks the LinkedIn feed to help you stay productive and
 
 ---
 
-*Created by [Ratul Rahman](https://x.com/heyrtl"Ratul on Twitter") © 2025-26*
+*Created by [Ratul Rahman](https://x.com/heyrtl "Ratul on Twitter") © 2025-26*
